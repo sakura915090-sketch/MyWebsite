@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #protected {
+        /* この要素を最初から非表示にする */
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>パスワード入力</h2>
+    <input type="password" id="password" placeholder="Password" /><br />
+    <button id="login">入室</button>
+    <p id="message"></p>
+    <div id="protected">
+      <h2>秘密のページ！</h2>
+      <p>パスワードを知ってる人しか見れないコンテンツ</p>
+    </div>
+    <script type="module">
+      import { login } from "./js/auth.js";
+      const msg = document.getElementById("message");
+      const secret = document.getElementById("protected");
+      document.getElementById("login").onclick = () => {
+        const password = document.getElementById("password").value;
+        login(
+          password,
+          () => {
+            msg.textContent = "認証成功！";
+            // 認証成功時に表示させる
+            secret.style.display = "block";
+          },
+          (err) => {
+            msg.textContent = "失敗: " + err.message;
+          }
+        );
+      };
+    </script>
+  </body>
+</html>
