@@ -1,0 +1,481 @@
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #333;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 64px;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 44px;
+  }
+}
+
+header {
+  position: fixed;
+  z-index: 9999;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 80%);
+  text-shadow: 1px 1px 2px gray;
+}
+
+header .container {
+  height: 100%;
+}
+
+header p {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+header ul {
+  display: flex;
+  column-gap: 40px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.firstview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  background-image: url("images/okumono_onecolor32.png");
+  background-position: center;
+  background-size: cover;
+}
+.firstview h1 {
+  font-size: 64px;
+}
+
+.firstview p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .firstview {
+    font-size: 56px;
+  }
+}
+
+.about {
+  padding: 140px 0;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile h3 {
+  margin-top: 72px;
+  font-size: 40px;
+}
+
+.profile p {
+  margin-top: 24px;
+  font-size: 24px;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.profile img {
+  width: 47.5%;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 0;
+  }
+  .profile {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .profile h3 {
+    margin-top: 24px;
+  }
+
+  .profile p {
+    margin-top: 16px;
+  }
+
+  .profile img {
+    width: 100%;
+  }
+}
+
+.school-club {
+  margin-top: 200px;
+  display: flex;
+  column-gap: 5%;
+}
+
+.school-club .contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.school-club img {
+  padding: 30px;
+  width: 700px;
+  height: 300px;
+  border-radius: 70px;
+  object-fit: cover;
+}
+
+.school-club h3 {
+  font-size: 25px;
+  margin-left: 30px;
+  margin-top: 8px;
+}
+
+.school-club p {
+  font-size: 18px;
+  margin-top: 16px;
+}
+.school-club .content div {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.school-club a {
+  display: inline-block;
+  margin-top: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+
+.school-club .content {
+  margin-top: 25px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .school-club {
+    flex-direction: column;
+    row-gap: 40px;
+    margin-top: 100px;
+  }
+
+  .school-club img {
+    height: 220px;
+    width: 100%;
+  }
+
+  .school-club a {
+    margin-top: 24px;
+  }
+}
+
+.favorite {
+  padding: 140px 0;
+  text-align: center;
+  background-image: url(images/okumono-color9.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.favorite .section-title {
+  color: #3883a6;
+  border-bottom: 6px double #3883a6;
+}
+
+.favorite-content img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.favorite-content h3 {
+  margin-top: 24px;
+  font-size: 24px;
+}
+
+.favorite-content p {
+  margin-top: 8px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.favorite-content {
+  width: 320px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 80%);
+  border-radius: 16%;
+}
+
+.favorite-contents {
+  margin-top: 80px;
+  column-gap: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .favorite {
+    padding: 80px 0;
+  }
+
+  .favorite-contents {
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+  }
+
+  .favorite-content {
+    max-width: 100%;
+  }
+
+  .favorite-content img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    max-width: 100%;
+  }
+}
+
+.scheduel {
+  padding: 140px 0;
+  text-align: center;
+  background-position: center;
+  background-image: url(images/oshi-note-p8.png);
+}
+
+.scheduel .section-title {
+  color: #333;
+  border-bottom: 6px double #333;
+}
+
+.scheduel-about img {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.scheduel-about h3 {
+  margin: 0;
+  font-size: 50px;
+}
+
+.scheduel span.spring {
+  color: #e3b4c1;
+}
+
+.scheduel span.summer {
+  color: #1c77cc;
+}
+
+.scheduel span.autumn {
+  color: #c96d21;
+}
+
+.scheduel-about p {
+  font-size: 25px;
+  text-align: left;
+}
+
+.scheduel-about {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  width: 90%;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+}
+
+.scheduels-about {
+  margin-top: 80px;
+  column-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scheduel-about div {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media (max-width: 768px) {
+  .scheduel {
+    padding: 80px 0;
+  }
+
+  .scheduels-about {
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+  }
+
+  .scheduel-about {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .scheduel-about img {
+    margin-left: 85px;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    max-width: 100%;
+  }
+}
+
+.contact {
+  padding: 140px 0;
+  text-align: center;
+}
+
+.contact .container {
+  max-width: 800px;
+}
+
+.contact .section-title {
+  font-size: 60px;
+  border-bottom: 3px solid #f90;
+}
+
+.contact p {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.contact a {
+  display: inline-block;
+  width: 200px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 80px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  border-radius: 16px;
+  border: 3px dotted transparent;
+}
+
+.contact .hp-nnzn {
+  background-color: #373c79;
+}
+
+.contact .hp-nnzn:hover {
+  color: #373c79;
+  background-color: #fff;
+  border: dotted;
+  border-color: #373c79;
+}
+
+.contact .nnzn-inst {
+  background-color: #d687b8;
+}
+
+.contact .nnzn-inst:hover {
+  color: #d687b8;
+  background-color: #fff;
+  border: dotted;
+  border-color: #d687b8;
+}
+
+.contact .nnzn-facebook {
+  background-color: #1877f2;
+}
+
+.contact .nnzn-facebook:hover {
+  color: #1877f2;
+  background-color: #fff;
+  border: dotted;
+  border-color: #1877f2;
+}
+
+.contact .sns {
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact p {
+    font-size: 20px;
+  }
+
+  .contact .sns {
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 50px;
+  }
+
+  .contact a {
+    width: 100%;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  header ul {
+    display: none;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: #edece7;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
