@@ -192,7 +192,7 @@ header a {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1366px) {
   .school-club {
     flex-direction: column;
     row-gap: 40px;
